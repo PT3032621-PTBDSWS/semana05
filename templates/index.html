@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row justify-content-center">
+<div class="col-12 col-md-8 col-lg-6">
+<h1 class="mb-3">Hello, {{ name if name else 'Stranger' }}!</h1>
+<p class="text-muted">What is your name?</p>
+
+
+<form method="post" novalidate>
+{{ form.hidden_tag() }}
+
+
+<div class="mb-3">
+<label class="form-label" for="{{ form.name.id }}">Name</label>
+{{ form.name(class_='form-control') }}
+{% if form.name.errors %}
+<div class="invalid-feedback d-block">
+{{ form.name.errors[0] }}
+</div>
+{% endif %}
+</div>
+
+
+<div class="d-grid d-sm-flex gap-2">
+{{ form.submit(class_='btn btn-primary') }}
+{% if name %}
+<a class="btn btn-outline-secondary" href="{{ url_for('index') }}">Clear</a>
+{% endif %}
+</div>
+</form>
+</div>
+</div>
+{% endblock %}
