@@ -1,0 +1,9 @@
+/* Ajustes visuais simples */
+body { background-color: #0b0b0b; color: #e9ecef; }
+.navbar { margin-bottom: 0; }
+.card, .alert, .btn, .form-control { border-radius: 0.75rem; }
+footer { color: #adb5bd; }
+label.form-label { color: #e9ecef; } #e9ecef; border-color: #343a40; }
+.form-control:focus { background-color: #1b1b1b; color: #fff; border-color: #495057; box-shadow: none; }
+.form-control { background-color: #1b1b1b; color: #e9ecef; border-color: #343a40; }
+.form-control:focus { background-color: #1b1b1b; color: #fff; border-color: #495057; box-shadow: none; }
